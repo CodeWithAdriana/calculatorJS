@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <link rel="stylesheet" href="./asset/CSS/style.css">
 </head>
+
 <body>
     <section>
         <div class="card">
             <div class="img-card"></div>
             <h6>Laptop Gamer AMD</h6>
             <p>
-                Precio base:$
-                <span class="precio-inicial"></span></p>
+                Precio base: $ <span class="precio-inicial"></span>
+            </p>
             <p>
                 Cantidad:
                 <span class="cantidad">0</span>
-                <button>+</button>
-                <button>-</button>
-            </p>    
+                <!-- onclick:para ejecutar cuando hacemos click -->
+                <button onclick="
+                precio = document.querySelector('.precio-inicial'); 
+                cantidad = document.querySelector('.cantidad'); 
+                nuevaCantidad = Number(cantidad.innerHTML) + 1;
+                cantidad.innerHTML  = nuevaCantidad;
+
+                total = document.querySelector('.valor-total');
+                nuevoPrecio = Number(precio.innerHTML)*nuevaCantidad;
+                total.innerHTML = nuevoPrecio;
+                ">+</button>
+                <button onclick="
+                precio = document.querySelector('.precio-inicial'); 
+                cantidad = document.querySelector('.cantidad'); 
+                nuevaCantidad = Number(cantidad.innerHTML) - 1;
+                cantidad.innerHTML  = nuevaCantidad;
+
+                total = document.querySelector('.valor-total');
+                nuevoPrecio = Number(precio.innerHTML)*nuevaCantidad;
+                total.innerHTML = nuevoPrecio;
+                ">-</button>
+            </p>
         </div>
     </section>
     <div class="total-section">
@@ -28,6 +49,7 @@
             <span class="valor-total"></span>
         </p>
     </div>
-    <script></script>
+    <script src="./asset/JS/calculadora.js"></script>
 </body>
+
 </html>
