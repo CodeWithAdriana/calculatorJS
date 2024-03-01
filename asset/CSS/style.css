@@ -9,6 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
+    background-color: black;
 }
 
 .card {
@@ -52,6 +53,7 @@ body {
     width: 250px;
     padding: 35px;
     box-sizing: border-box;
+    color: white;
 }
 
 .total-section .color {
